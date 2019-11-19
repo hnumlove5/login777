@@ -2815,7 +2815,7 @@ def lineBot(op):
                     
                
               
-                elif msg.text.lower() == "คทเหี้ย",".เชคดำ":
+                elif msg.text.lower() == ["คทเหี้ย"]:
                     if msg._from in lineMID:
                         if settings["blacklist"] == []:
                             line.sendMessage(to, "Nothing boss")
