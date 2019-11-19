@@ -3244,13 +3244,13 @@ def lineBot(op):
                     else:
                         line.sendMessage(msg.to, "ปิดระบบแสกนคนอ่านแล้ว \nᴮʸ✯нηυм вσт ℓιηє")
                         
-                elif text.lower() == "ผู้ดูแล":
+                elif text.lower() == ["ผู้ดูแล"]:
                         line.sendContact(to,"ua26d317bf6c058a4c00aa93caee1ab0d") 
 				
-                elif text.lower() == "ผส","ผู้คุม":
+                elif text.lower() == ["ผส"]:
                         line.sendContact(to,"ua26d317bf6c058a4c00aa93caee1ab0d")
                     
-                elif text.lower() == 'ของขวัญ':
+                elif text.lower() == ['ของขวัญ']:
                         line.sendGift(msg.to,'2','sticker')
                         line.sendGift(msg.to,'11537','sticker')
                         line.sendGift(msg.to,'11539','sticker')
@@ -3267,21 +3267,21 @@ def lineBot(op):
                                         'MSGTPL': '1'}
                     msg.text = None
                     line.sendMessage(msg)                        
-                elif msg.text.lower() == "เชคติ๊กแทค":
+                elif msg.text.lower() == ["เชคติ๊กแทค"]:
                         msgSticker = settings["messageSticker"]["listSticker"]["คนแทค"]
                         if msgSticker != None:
                             sid = msgSticker["STKID"]
                             spkg = msgSticker["STKPKGID"]
                             sver = msgSticker["STKVER"]
                             sendSticker(to, sver, spkg, sid)
-                elif msg.text.lower() == "ตั้งติ๊กแทค":
+                elif msg.text.lower() == ["ตั้งติ๊กแทค"]:
                     settings["messageSticker"]["addStatus"] = True
                     settings["messageSticker"]["addName"] = "คนแทค"
                     line.sendMessage(to, "ส่งสติ๊กเกอร์มา🍯")
-                elif msg.text.lower() == "ลบติ๊กแทค":
+                elif msg.text.lower() == ["ลบติ๊กแทค"]:
                     settings["messageSticker"]["listSticker"]["คนแทค"] = None
                     line.sendMessage(to, "ลบสติ๊กเกอร์คนแทคแล้ว🍭")                    
-                elif msg.text.lower() == "รีเช็ต":
+                elif msg.text.lower() == ["รีเช็ต"]:
                     settings["s"] = ""
                     settings["c"] = "✯ᴮʸ✯нηυм вσт ℓιηє✯ "
                     line.sendMessage(to, "[ Done ]")                       
